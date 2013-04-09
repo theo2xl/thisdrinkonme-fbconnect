@@ -1,0 +1,202 @@
+<!DOCTYPE html> 
+<html xmlns:og="http://ogp.me/ns" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+# 
+# http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#  KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+--> 
+	<head> 
+		<title>This Drink On Me</title>
+        <!-- See https://developers.facebook.com/docs/opengraph/ -->
+        <meta property="og:title" content="This Drink On Me" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://apps.facebook.com/mobile-start/" />
+        <meta property="og:site_name" content="This Drink On Me" />
+        <!--<meta property="og:image" content="http://www.facebookmobileweb.com/hackbook/img/facebook_icon_large.png"/>
+        <meta property="fb:admins" content="20901205" />-->
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<!--<meta name = "format-detection" content = "telephone=no"/>-->
+    	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script src="js/jquery.retina.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/non-retina.css" />
+        <link rel="stylesheet" type="text/css" href="css/retina.css" 
+        media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+	</head> 
+	<body>
+        <!-- This initializes the Facebook JS SDK. -->
+        <div id="fb-root"></div>
+		<div id="home" data-role="page">
+
+			<div data-role="header">
+				<div id="logo"></div>
+			</div><!-- /header -->
+
+			<div data-role="content" class="modal">
+				<form id="login" action="login.php" method="get">
+					<fieldset>
+						<label class="ui-hidden-accessible" for="username">Username:</label>
+						<input type="text" name="username" id="username" value placeholder="Username" />
+						<label class="ui-hidden-accessible" for="password">Password:</label>
+						<input type="password" name="password" id="password" value placeholder="Password" />
+						<!-- <button type="submit" data-theme="b" name="submit" value="submit-value" aria-disabled="false">Login</button> -->
+						<a id="login-btn" class="btn" data-role="button" href="#categories"> Login</a>
+					</fieldset>
+				</form>
+				<!--<button onclick="facebook.login()">Facebook Login</button>-->
+                <!--<button onclick="facebook.promptExtendedPermissions()">Grant the 'friends_status' permission</button>-->
+                <!--<button onclick="facebook.getLoginStatus()">Login Status</button>-->
+                <!--<button onclick="facebook.logout()">Logout</button>-->
+                <!--<button onclick="facebook.permissions()">Log Permissions</button>-->
+			</div><!-- /content -->
+			<div data-role="footer" data-position="fixed">
+			</div><!-- /footer -->
+		</div><!-- /page -->
+		
+		<!-- Categories.html -->
+		<div id="categories" data-role="page">
+			<div data-role="header" data-position="fixed">
+                <a href="#" data-icon="back" data-iconpos="notext" data-role="button" data-rel="back">Go Back</a>
+				<a href="#home" data-icon="home" data-iconpos="notext" data-transition="none" data-direction="reverse">Home</a>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<form action="buyabeer.html" method="get">	
+					<ul data-role="listview" data-inset="false" data-filter="false">
+						<li><a href="#checkins"><h4>Check-Ins</h4></a></li>
+						<li><a href="#"><h4>Search Bars</h4></a></li>
+					</ul>
+					<!-- <button type="submit" data-theme="b" name="submit" value="submit-value" aria-disabled="false">Buy a Friend a Beer!</button> -->
+				</form>
+				<div class="list-end"></div>
+			</div><!-- /content -->
+			<div data-role="footer" data-position="fixed">
+			</div><!-- /footer -->
+        </div>
+		
+        <!-- Checkins.html -->
+		<div id="checkins" data-role="page">
+			<div data-role="header" data-position="fixed">
+                <a href="#" data-icon="back"data-role="button" data-iconpos="notext" data-rel="back">Go Back</a>
+				<a href="#home" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+			</div><!-- /header -->
+
+			<div data-role="content" id="fb-data">
+			</div><!-- /content -->
+			<div class="list-end"></div>
+			<!-- <div data-role="footer" data-position="fixed">
+			</div>/footer -->
+		</div><!-- /page -->
+		
+        <!-- SelectBeer.html -->
+		<div id="selectbeer" data-role="page">
+			<div data-role="header" data-position="fixed">
+                <a href="#" data-icon="back" data-role="button" data-iconpos="notext" data-rel="back">Go Back</a>
+				<a href="#home" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+			</div> <!-- /header -->
+			<div data-role="content">
+				<div id="nameplate" class="over">
+					<div class="wrapper">
+						<div class='thumbnail'><img src='assets/list/wizard_zelda.png'></div>
+	              		<div class='info'><h2></h2><p></p></div>
+						<div class="spacer"></div>
+					</div>
+				</div>
+				<div class="under">
+					<ul data-role="listview" data-inset="false" data-filter="false">
+						<li class="craft">
+							<div class="left">
+								<div id="craft-icon" class="left"></div>
+								<h4>Craft</h4>
+							</div>
+							<div class="right">
+								<div class="left"><h4>$4.00</h4></div>
+								<div id="select-craft" class="select"></div>
+							</div>
+							<div class="spacer"></div>
+						</li>
+						<li class="beer">
+							<div class="left">
+								<div id="beer-icon" class="left"></div>
+								<h4>Domestic</h4>
+							</div>
+							<div class="right">
+								<div class="left"><h4>$3.00</h4></div>
+								<div id="select-beer" class="unselect"></div>
+							</div>
+							<div class="spacer"></div>
+						</li>
+					</ul>
+					<div class="list-end"></div>
+				</div>
+			</div><!-- /content -->
+			<div id="footer" data-role="footer" data-position="fixed" class="buy-footer">
+				<div class="bottle-opener"><h2 id="price">$4.00</h2></div>
+				<div><a href="#confirm" data-role="button" data-rel="dialog" data-transition="pop" class="pay-btn right"></a></div>
+				<div class="spacer"></div>
+			</div><!-- /footer -->
+		</div><!-- /page -->
+        
+        <!-- confirm.html -->
+		<div id="confirm" data-role="page">
+			<div data-role="header">
+			</div>
+			<div data-role="content">
+				<div><h2>Please verify contact info.</h2></div>
+                <fieldset>
+					<div id="contact-name"><h2></h2></div>
+					<!-- use class="ui-hidden-accessible" to hide the label and still show it for other devices -->
+                    <label class="ui-hidden-accessible" for="mobile-num">Phone/email</label>
+                    <input type="text" value="(720) 261-6417" name="mobile-num" id="mobile-num" value placeholder="Mobile Phone Number" />
+                    <label class="ui-hidden-accessible" for="facebook-contact">Facebook</label>
+                    <input type="text" value="" name="mobile-num" id="mobile-num" value placeholder="Facebook email" />
+ 					<!-- <a data-role="button" data-rel="back">Back</a> -->
+                </fieldset>
+				<div id="congrats"></div>				
+			</div><!-- /content -->
+			<div><a id="send-beer" data-role="button" class="ok-btn"></a></div>
+		</div><!-- /page -->
+        
+		<script type="text/javascript" src="cordova-2.1.0.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        <!-- cordova facebook plugin -->
+        <script src="cdv-plugin-fb-connect.js"></script>
+        <!-- facebook js sdk -->
+        <script src="facebook_js_sdk.js"></script>
+		<script type="text/javascript">
+    		app.initialize();
+
+    		$(document).ready(function() 
+			{
+                // Turn all img to retina display
+                $('img').retina('@2x');
+
+				hideNameplate();
+				
+				$('#selectbeer li').each(function(index) 
+				{
+					$(this).click(function() {
+					  beer.select($(this).attr('class').split(" ")[0]);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

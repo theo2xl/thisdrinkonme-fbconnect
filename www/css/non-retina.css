@@ -1,0 +1,435 @@
+html,
+body {
+    height:100%;
+    font-size:12px;
+    width:100%;
+}
+html {
+    display:table;
+}
+body {
+    display:table-cell;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    vertical-align:middle;
+}
+fieldset {
+	text-align: left;
+}
+input[type=text] {
+
+}
+@font-face {
+  font-family: 'LobsterTwo-Regular';
+  src: url(../assets/fonts/LobsterTwo-Regular.otf);
+}
+
+h2, h3, h4, p, label {
+	font-family: 'LobsterTwo-Regular';
+	text-shadow: none;
+	color: #fff;
+}
+
+[data-role="page"] {
+	text-align: center;
+	background: url(../assets/backgrounds/main_bg.jpg) center top repeat-y;
+	background-size: 320px auto;
+}
+
+#logo,
+#nameplate,
+a.ok-btn,
+a.pay-btn,
+.bottle-opener,
+div.thumbnail,
+.list-end,
+#craft-icon,
+#beer-icon,
+.select,
+.unselect,
+#fb-data .ui-icon-arrow-r,
+#categories .ui-icon-home,
+#selectbeer .ui-icon-home,
+#checkins .ui-icon-home,
+#categories .ui-icon-back,
+#selectbeer .ui-icon-back,
+#checkins .ui-icon-back,
+#confirm .ui-icon-delete,
+[data-role="listview"] li,
+[data-role="header"],
+[data-role="footer"]{
+	background: url(../assets/sprites.png) no-repeat;
+}
+
+/* header styles */
+
+[data-role="header"] {
+    background-position: 0 0;
+	width: 320px;
+	height: 64px;
+    /*background-size: 320px auto;*/
+    margin: 0 auto;
+}
+/* end header styles */
+
+/* Custom JQuery button/icon styles */
+
+#footer .ui-btn-corner-all,
+#categories .ui-icon-back,
+#categories .ui-btn-corner-all,
+#categories .ui-icon-home,
+#selectbeer .ui-icon-back,
+#selectbeer .ui-btn-corner-all,
+#selectbeer .ui-icon-home,
+#checkins .ui-icon-back,
+#checkins .ui-btn-corner-all,
+#checkins .ui-icon-home,
+#fb-data .ui-icon-arrow-r,
+#confirm .ui-icon-delete,
+#confirm .ui-btn-corner-all{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-border-radius: none;
+	-webkit-border-radius: 0;
+	border-radius: 19px;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+#confirm .ui-icon-delete{
+	background-position:  -530px -114px;
+}
+
+#confirm .ui-btn-icon-notext{
+	width: 31px;
+	height: 31px;
+	padding: 7px 0 0 6px;
+	text-shadow: 0 -1px 1px #1E120B;
+}
+
+#categories .ui-icon-back, 
+#selectbeer .ui-icon-back,
+#checkins .ui-icon-back{
+	background-position:  -530px -114px;
+	width: 19px;
+	height: 18px;
+    font-weight: bold;
+    outline: 0 none;
+    text-decoration: none;
+    border-radius: 0;
+}
+
+#categories .ui-icon-home, 
+#selectbeer .ui-icon-home,
+#checkins .ui-icon-home{
+	background-position:  -500px -114px;
+	width: 18px;
+	height: 18px;
+    font-weight: bold;
+    outline: 0 none;
+    text-decoration: none;
+    border-radius: 0;
+}
+
+#categories .ui-btn-icon-notext, 
+#selectbeer .ui-btn-icon-notext,
+#checkins .ui-btn-icon-notext{
+	background: #3B2314;
+	width: 31px;
+	height: 31px;
+	padding: 7px 0 0 6px;
+	text-shadow: 0 -1px 1px #1E120B;
+}
+
+#categories .ui-btn-left, 
+#selectbeer .ui-btn-left,
+#checkins .ui-btn-left{
+	top: 5px;
+	left:65px;
+}
+
+#categories .ui-btn-right, 
+#selectbeer .ui-btn-right,
+#checkins .ui-btn-right{
+	top: 5px;
+	right:65px;
+}
+
+/* End Custom Jquery button/icon styles */
+
+#logo {
+	text-align: center;
+    width: 238px;
+    height: 216px;
+    position: relative;
+	top: -60px;
+    background-position:  -328px -163px;
+    margin: 0 auto;
+}
+
+#selectbeer .ui-content {
+	padding: 0;
+	overflow: hidden;
+}
+[data-role="content"] {
+	margin: 0 auto;
+	position: relative;
+	top: -23px;
+}
+[data-role="content"].modal {
+	margin: 0 auto;
+	width: 280px;
+	position: relative;
+	top: 80px;
+	z-index: 999;
+}
+
+.left {
+	float: left;
+	border: 0px solid blue;
+}
+
+#craft-icon{
+	background-position: -526px 0;
+	width: 30px;
+	height: 47px;
+}
+
+#beer-icon{
+	background-position: -566px 0;
+	width: 25px;
+	height: 47px;
+	margin-left: 3px;
+}
+
+.select{
+	background-position: -436px -49px;
+	width: 39px;
+	height: 39px;
+	float: right;
+	border: 0px solid red;
+}
+.unselect{
+	background-position: -482px -50px;
+	width: 39px;
+	height: 39px;
+	float: right;
+	border: 0px solid red;
+}
+
+.left h4{
+	margin-right: 5px;
+}
+
+.right {
+	float: right;
+	border: 0px solid red;
+}
+div.spacer {
+  	clear: both;
+}
+
+p.label {
+	color: #333132;
+}
+p.data {
+	color: #000;
+}
+
+/* listview styles */
+.ui-li {
+	border-top-width: 0;
+	margin: 0 auto;
+}
+
+#fb-data .ui-icon-arrow-r{
+	background-position: -540px -57px;
+	width: 33px;
+	height: 33px;
+}
+
+[data-role="listview"] {
+    background: url(../assets/list/list_bg.png) center top repeat-y;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+[data-role="listview"] li {
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	background-position: 0 -550px;
+	width: 235px;
+}
+div.thumbnail {
+	background-position: -345px -98px;
+	width: 62px;
+	height: 62px;
+	padding-right: 8px;
+	float: left;
+}
+
+.list-end {
+    position: relative;
+	top: 11px;
+	background-position: -326px -510px;
+	width: 288px;
+	height: 62px;
+	margin: 0 auto;
+}
+
+#checkins .list-end {
+	top: -24px;
+}
+
+div.thumbnail img {
+    position: relative;
+	top: 6px;
+   	left: 6px;
+	width: 50px;
+	height: 50px;
+}
+.ui-btn-up-c, .ui-btn-hover-c, .ui-li:last-child, .ui-li.ui-field-contain:last-child, .ui-bar-a {
+	border: 0;
+}
+.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+	min-height: 60px;
+	padding-left: 30px;
+}
+/* end listview styles */
+
+/* nameplate styles */
+
+#nameplate {
+    text-align: left;
+    padding: 0;
+    width: 320px;
+    height: 109px;
+    background-position: 0 -66px;
+    margin: 0 auto;
+	line-height: 90%;
+}
+.wrapper {
+	border: 0px solid blue;
+	padding: 10px 0px 0px 6px;
+}
+.over {
+	position: relative;
+	z-index: 10;
+}
+.under {
+	position: relative;
+	z-index: 1;
+}
+.under [data-role="listview"] {
+	position: relative;
+	top: -10px;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.under .list-end {
+	top: 0px;
+}
+
+/* end nameplate styles */
+
+/* beer styles */
+.ui-li .ui-btn-inner a.ui-link-inherit,.ui-li-static.ui-li{
+	padding: 13px 0 4px 0;
+}
+
+
+/* end beer styles*/
+
+#congrats {
+	display: none;
+	font-family: 'LobsterTwo-Regular';
+	text-shadow: none;
+    color: #fff;
+    font-size:14px;
+}
+/* Buy and bottle opener*/
+
+.bottle-opener {
+    position: relative;
+	top: 40px;
+	background-position: -326px -381px;
+	background-image: 172px auto;
+	width: 172px;
+	height: 89px;
+	text-align: left;
+}
+.bottle-opener h2 {
+	padding: 32px 0px 0px 64px;
+}
+
+a.pay-btn {
+	position: relative;
+	bottom: 60px;
+    background-position:  -508px -374px;
+	width: 117px;
+	height: 117px;
+}
+
+[data-role="footer"].buy-footer {
+	text-align: center;
+	background-position: 0 -356px;
+	height: 162px;
+	position:relative !important; 
+	bottom:0; 
+	width: 320px;
+    height: 155px;
+}
+/* end Buy and bottle opener*/
+
+/* Confirm dialog */
+.ui-overlay-shadow {
+	-moz-box-shadow: 0 0 0px rgba(0,0,0,.6);
+	-webkit-box-shadow: 0 0 0px rgba(0, 0, 0, .6);
+	box-shadow: 0 0 0px rgba(0, 0, 0, .6);
+}
+.ui-dialog-contain {
+	margin: 2% auto 15px auto;
+}
+.ui-dialog .ui-header {
+	margin-top: 5%;
+	margin-left: 85%;
+}
+#confirm [data-role="header"] {
+	background: none;
+	height: 72px;
+}
+
+#confirm [data-role="content"] {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:3px solid #292D35;
+	background: #4D5053;
+	text-align: center;
+}
+[data-role="content"] fieldset {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px solid #fff;
+	background: #e13c33;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+}
+
+a.ok-btn {
+	margin: 0 auto;
+	position: relative;
+	top: -18px;
+    background-position: -336px 0;
+	width: 91px;
+	height: 91px;
+}
+/* end Confirm dialog*/
+
+[data-role="footer"] {
+    text-align: center;
+    width: 320px;
+    height: 135px;
+    background-position: 0 -187px;
+    margin: 0 auto;
+}
